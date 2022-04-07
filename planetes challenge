@@ -1,0 +1,38 @@
+/*Une copie de la sortie de la commande find*/
+COMMUN+8609930V@5CD1343GB5 MINGW64 ~/quests/shell/planets
+$ find
+.
+./fictional
+./inhabited
+./inhabited/arrakis.jpeg
+./inhabited/coruscant.jpeg
+./inhabited/cybertron.jpeg
+./inhabited/earth.jpeg
+./real
+./real/gas-giants
+./real/gas-giants/jupiter.jpeg
+./real/gas-giants/neptune.jpeg
+./real/gas-giants/saturn.jpeg
+./real/gas-giants/uranus.jpeg
+./real/terrestrial
+./real/terrestrial/mars.jpeg
+./real/terrestrial/mercury.jpeg
+./real/terrestrial/venus.jpeg
+
+/*Une copie de l'historique des commandes qui t'a conduit à ce point : utilise la commande history et colle uniquement les lignes relatives au challenge dans le Gist*/
+cd planets
+mkdir real fictional inhabited
+cd real
+mkdir terrestrial gas-giants dwarf-planets
+mv real/pluton.jpeg real/dwarf-planets/pluton.jpeg
+mv mercury.jpeg venus.jpeg mars.jpeg earth.jpeg ~/quests/shell/planets/real/terrestrial
+mv jupiter.jpeg uranus.jpeg neptune.jpeg ~/quests/shell/planets/real/gas-giants
+mv saturn.jpeg ~/quests/shell/planets/real/gas-giants
+cd fictional; ls
+mv arrakis.jpeg coruscant.jpeg cybertron.jpeg ~/quests/shell/planets/inhabited
+cd real
+mv terrestrial/earth.jpeg  ~/quests/shell/planets/inhabited
+rm -r dwarf-planets
+cd ..
+find
+history
